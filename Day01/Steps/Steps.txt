@@ -1,0 +1,6 @@
+﻿Create Project
+Install Microsoft.EntityFrameworkCore.SqlServer
+Create Folder Models
+Create Folder Context
+Context => Class => EF Run Time
+Models => Class => Database Table
