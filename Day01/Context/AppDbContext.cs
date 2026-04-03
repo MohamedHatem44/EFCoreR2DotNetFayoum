@@ -6,6 +6,7 @@ namespace Day01.Context
 {
     public class AppDbContext : DbContext
     {
+        /*------------------------------------------------------------------*/
         // 1- Use SqlServer
         // 2- Connection String
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -14,7 +15,7 @@ namespace Day01.Context
             optionsBuilder.UseSqlServer(connectionString);
             //.UseLazyLoadingProxies();
         }
-
+        /*------------------------------------------------------------------*/
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Entity<Employee>()
@@ -31,10 +32,11 @@ namespace Day01.Context
 
             base.OnModelCreating(modelBuilder);
         }
-
+        /*------------------------------------------------------------------*/
         // Classes => Tables
         // Local Containers => DbSet<T>
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
+        /*------------------------------------------------------------------*/
     }
 }
